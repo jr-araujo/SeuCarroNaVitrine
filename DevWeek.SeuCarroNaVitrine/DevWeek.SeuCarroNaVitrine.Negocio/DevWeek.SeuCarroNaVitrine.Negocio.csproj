@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E572C50A-9B2B-4396-A5C2-F0822674202D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DevWeek.SeuCarroNaVitrine.Negocio</RootNamespace>
+    <AssemblyName>DevWeek.SeuCarroNaVitrine.Negocio</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DapperExtensions, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DapperExtensions.1.5.0\lib\net45\DapperExtensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Raven.Abstractions, Version=3.5.1.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
+      <HintPath>..\packages\RavenDB.Client.3.5.1\lib\net45\Raven.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Raven.Client.Lightweight, Version=3.5.1.0, Culture=neutral, PublicKeyToken=37f41c7f99471593, processorArchitecture=MSIL">
+      <HintPath>..\packages\RavenDB.Client.3.5.1\lib\net45\Raven.Client.Lightweight.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GerenciamentoDeAnunciante\RepositorioRaven\AnuncianteRepositorioRavenDB.cs" />
+    <Compile Include="Utils\DocumentStoreHolder.cs" />
+    <Compile Include="GerenciamentoDeAnunciante\RepositorioRaven\AnuncianteIdJsonConverter.cs" />
+    <Compile Include="GerenciamentoDeAnunciante\RepositorioRaven\AnuncianteIdConverter.cs" />
+    <Compile Include="GerenciamentoDeAnunciante\RepositorioSQL\AnuncianteRepositorioSQL.cs" />
+    <Compile Include="GerenciamentoDeAnuncio\Anuncio.cs" />
+    <Compile Include="GerenciamentoDeAnuncio\Proposta.cs" />
+    <Compile Include="Comum\Agregado.cs" />
+    <Compile Include="Comum\Entidade.cs" />
+    <Compile Include="Comum\Enumeration.cs" />
+    <Compile Include="Comum\ObjetoDeValor.cs" />
+    <Compile Include="GerenciamentoDeAnuncio\RepositorioRaven\AnuncioIdConverter.cs" />
+    <Compile Include="GerenciamentoDeAnuncio\RepositorioRaven\AnuncioIdJsonConverter.cs" />
+    <Compile Include="GerenciamentoDeAnuncio\RepositorioRaven\AnuncioRepositorioRavenDB.cs" />
+    <Compile Include="GerenciamentoDeAnuncio\RepositorioSQL\AnuncioRepositorioSQL.cs" />
+    <Compile Include="NucleoCompartilhado\Enums\StatusPublicacao.cs" />
+    <Compile Include="GerenciamentoDeAnunciante\Anunciante.cs" />
+    <Compile Include="GerenciamentoDeAnuncio\Veiculo.cs" />
+    <Compile Include="NucleoCompartilhado\AgendaTelefonica.cs" />
+    <Compile Include="NucleoCompartilhado\DetalheDoVeiculo.cs" />
+    <Compile Include="NucleoCompartilhado\Email.cs" />
+    <Compile Include="NucleoCompartilhado\Endereco.cs" />
+    <Compile Include="NucleoCompartilhado\Enums\TipoDeCombustivel.cs" />
+    <Compile Include="NucleoCompartilhado\DetalheDeFabricacao.cs" />
+    <Compile Include="Comum\Identidade.cs" />
+    <Compile Include="NucleoCompartilhado\ItensOpcicionais.cs" />
+    <Compile Include="NucleoCompartilhado\Nome.cs" />
+    <Compile Include="NucleoCompartilhado\Enums\Cor.cs" />
+    <Compile Include="NucleoCompartilhado\Enums\TipoDaCarroceria.cs" />
+    <Compile Include="NucleoCompartilhado\Enums\TipoDoCambio.cs" />
+    <Compile Include="NucleoCompartilhado\Periodo.cs" />
+    <Compile Include="NucleoCompartilhado\Telefone.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
