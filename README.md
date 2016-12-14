@@ -6,10 +6,14 @@ Nesta Demo, estou abordando os conceitos de:
 
 - Enum vs Enumeration Class
 - Identidade, como um Objeto de valor para uso de Ids
-- Entidade
 - Objeto de Valor
   - Imutabilidade
   - Thread Safe
+  - Auto-Validação
+  - Evitando Primitive Obsession
+- Entidade
 - Agregação
 - Modelagem Relacional
+  - Repositorio de persistência
 - Relacional vs RavenDB (NoSQL)
+  - Repositorio de persistência
